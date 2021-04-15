@@ -1,4 +1,4 @@
-# React Calculator
+# React-Redux Book Store
 
 This is a book store app that uses React for the user interface and Redux as a state management system.
 
