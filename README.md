@@ -1,6 +1,6 @@
 # React Calculator
 
-This is a book store app create using React for the user interface and Redux as a state management system.
+This is a book store app created using React for the user interface and Redux as a state management system.
 
 
 ## Built With
