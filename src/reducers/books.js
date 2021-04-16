@@ -1,8 +1,18 @@
-const defaultBooks = [{id: Math.random() },
-    {},
-    {}]
+const defaultBooks = [{id: Math.random() * (100 - 1) + 1,
+        title: 'los mostros y el parsero',
+        category: 'Kids'
+    },
+    {
+        id: Math.random() * (100 - 1) + 1,
+        title: 'kotopako & krillin',
+        category: 'Action'},
+    {
+        id: Math.random() * (100 - 1) + 1,
+        title: 'Choripan trayectory',
+        category: 'History'
+}];
 
-function booksReducer (state = [], action) {
+function booksReducer (defaultBooks, action) {
     const getBookIndex = (book, state) => {
         for(let i = 0; i < state.length; i+=1 ){
             if(state[i].id === book.id){
