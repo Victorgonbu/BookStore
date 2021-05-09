@@ -25,11 +25,7 @@ BooksList.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-  })),
-};
-
-BooksList.defaultProps = {
-  books: [],
+  })).isRequired,
 };
 
 const mapStateToProps = (state) => ({ books: state });

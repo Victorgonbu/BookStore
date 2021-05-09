@@ -7,17 +7,17 @@ import App from './components/App';
 import booksReducer from './reducers/books';
 
 const initialState = [{
-  id: Math.round(Math.random() * (100 - 1) + 1),
+  id: 1,
   title: 'Who moved my cheese',
   category: 'Kids',
 },
 {
-  id: Math.round(Math.random() * (100 - 1) + 1),
+  id: 2,
   title: 'Benjamin Franklin',
   category: 'Biography',
 },
 {
-  id: Math.round(Math.random() * (100 - 1) + 1),
+  id: 3,
   title: 'Inferno',
   category: 'Drama',
 }];
