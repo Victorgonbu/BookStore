@@ -18,15 +18,17 @@ function booksReducer(state = [{
     return null;
   };
 
-  const { type, book } = action;
+  const { type, payload } = action;
   const stateCopy = state.slice();
   let bookIndex;
+  let newBook;
   switch (type) {
     case 'CREATE_BOOK':
-      stateCopy.push(book);
+      newBook = { ...payload, id: stateCopy.length + 1 };
+      stateCopy.push(newBook);
       break;
     case 'REMOVE_BOOK':
-      bookIndex = getBookIndex(book, state);
+      bookIndex = getBookIndex(payload, state);
       stateCopy.splice(bookIndex, 1);
       break;
     default:

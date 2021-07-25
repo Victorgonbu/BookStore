@@ -1,32 +1,58 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions/index';
 
-function BooksForm() {
+function BooksForm(props) {
+  const { createBook } = props;
   const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const [bookFields, setBookFields] = useState({ title: '', category: '' });
 
   const opt = (CATEGORIES) => CATEGORIES.map((ct) => (<option key={ct} value={ct}>{ct}</option>));
+  useEffect(() => {
+    console.log(bookFields);
+  }, [bookFields]);
+  const handleChange = (e) => {
+    setBookFields((state) => ({ ...state, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    createBook(bookFields);
+    setBookFields({ title: '', category: '' });
+  };
+
   return (
     <form>
       <div className="title">
         <label htmlFor="title">
           Title
-          <input name="title" id="title" type="text" />
+          <input value={bookFields.title} onChange={handleChange} name="title" id="title" type="text" />
         </label>
 
       </div>
       <div className="category">
         <label htmlFor="category">
           Category
-          <select name="category" id="category">
+          <select value={bookFields.category} onChange={handleChange} name="category" id="category">
             {opt(CATEGORIES)}
           </select>
         </label>
 
       </div>
       <div>
-        <input type="submit" value="Submit" />
+        <input onClick={handleSubmit} type="submit" value="Submit" />
       </div>
     </form>
   );
 }
 
-export default BooksForm;
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => { dispatch(createBook(book)); },
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
