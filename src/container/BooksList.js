@@ -28,6 +28,6 @@ BooksList.propTypes = {
   })).isRequired,
 };
 
-const mapStateToProps = (state) => ({ books: state });
+const mapStateToProps = (state) => ({ books: state.books });
 
 export default connect(mapStateToProps)(BooksList);
