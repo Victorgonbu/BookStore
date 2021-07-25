@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
@@ -9,9 +9,7 @@ function BooksForm(props) {
   const [bookFields, setBookFields] = useState({ title: '', category: '' });
 
   const opt = (CATEGORIES) => CATEGORIES.map((ct) => (<option key={ct} value={ct}>{ct}</option>));
-  useEffect(() => {
-    console.log(bookFields);
-  }, [bookFields]);
+
   const handleChange = (e) => {
     setBookFields((state) => ({ ...state, [e.target.name]: e.target.value }));
   };
