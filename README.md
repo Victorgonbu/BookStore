@@ -24,8 +24,8 @@ To get a local copy up and running follow these simple example steps.
 
 - Git clone https://github.com/Shaqri/BookStore.git
 - Move to the root directory in your command line
-- run `npm install`
-- run `npm start`
+- run `yarn install`
+- run `yarn start`
 
 
 ## Author
