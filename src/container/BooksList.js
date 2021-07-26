@@ -2,9 +2,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { removeBook } from '../actions/index';
 
 function BooksList(props) {
-  const { books } = props;
+  const { books, removeBook } = props;
+
+  const getBookIndex = (book, state) => {
+    for (let i = 0; i < state.length; i += 1) { if (state[i].id === book.id) return i; }
+    return null;
+  };
+
+  const handleRemove = (book) => {
+    const bookIndex = getBookIndex(book, books);
+    removeBook(bookIndex);
+  };
 
   return (
     <table>
@@ -14,7 +25,7 @@ function BooksList(props) {
         <th>Category</th>
       </tr>
 
-      { books.map((book) => (<Book key={book.id} book={book} />)) }
+      { books.map((book) => (<Book handleRemove={handleRemove} key={book.id} book={book} />)) }
 
     </table>
   );
@@ -26,8 +37,13 @@ BooksList.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   })).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({ books: state });
+const mapStateToProps = (state) => ({ books: state.books });
 
-export default connect(mapStateToProps)(BooksList);
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (bookIndex) => { dispatch(removeBook(bookIndex)); },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

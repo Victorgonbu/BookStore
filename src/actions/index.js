@@ -5,8 +5,8 @@ function createBook(book) {
   return { type: CREATE_BOOK, payload: book };
 }
 
-function RemoveBook(book) {
+function removeBook(book) {
   return { type: REMOVE_BOOK, payload: book };
 }
 
-export { createBook, RemoveBook };
+export { createBook, removeBook };
