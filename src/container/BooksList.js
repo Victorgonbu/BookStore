@@ -33,19 +33,22 @@ function BooksList(props) {
     <>
       <Filter handleFilter={handleFilterChange} />
       <table>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
-
-        { filterBooks(books).map((book) => (
-          <Book
-            handleRemove={handleRemove}
-            key={book.id}
-            book={book}
-          />
-        )) }
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          { filterBooks(books).map((book) => (
+            <Book
+              handleRemove={handleRemove}
+              key={book.id}
+              book={book}
+            />
+          )) }
+        </tbody>
 
       </table>
     </>
