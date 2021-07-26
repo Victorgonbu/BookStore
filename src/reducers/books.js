@@ -11,7 +11,7 @@ function booksReducer(state = [{
 {
   id: 3,
   title: 'Inferno',
-  category: 'Drama',
+  category: 'Horror',
 }], action) {
   const { type, payload } = action;
   const stateCopy = state.slice();

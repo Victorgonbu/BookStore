@@ -4,7 +4,7 @@ import filterReducer from './filter';
 
 const rootReducer = combineReducers({
   books: bookReducer,
-  filter: filterReducer
+  filter: filterReducer,
 });
 
 const configureStore = () => createStore(rootReducer);
