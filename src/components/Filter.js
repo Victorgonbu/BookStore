@@ -3,7 +3,6 @@ import Select from 'react-select';
 import PropTypes from 'prop-types';
 
 const Filter = (props) => {
-  console.log(props);
   const { handleFilter } = props;
   const CATEGORIES = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const getOptions = () => CATEGORIES.map((category) => ({ value: category, label: category }));

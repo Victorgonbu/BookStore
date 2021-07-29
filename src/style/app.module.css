@@ -1,7 +1,32 @@
-.app {
-  font-size: 1.5em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.flex {
+  display: flex;
+}
+
+.navbar {
+  border: 1px solid blue;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 2em;
+  font-size: 2em;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.leftmost {
+  align-items: center;
+}
+
+
+.navLinks {
+
+}
+
+.navLink{
+  margin-right: 1em;
+}
+
+.active {
+  color: red;
 }
