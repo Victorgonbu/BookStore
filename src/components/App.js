@@ -14,9 +14,11 @@ const MainContainer = styled.div`
   display: block;
   width: 90%;
   height: calc(100vh - 8rem);
-  padding: 1rem 3rem;
-  margin: 4rem auto;
-  border: 1px solid red;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: 15px 15px 40px 0 var(--gray);
+  background-color: var(--background-white);
 `;
 
 function App() {

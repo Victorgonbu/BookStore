@@ -3,9 +3,11 @@
 }
 
 .navbar {
-  border: 1px solid blue;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 3rem;
+  background-color: white;
+  border-bottom: 1px solid var(--soft-gray);
 }
 
 .logo {
@@ -41,11 +43,49 @@
 }
 
 .bookList {
-  margin-top: 2.5em;
+  margin-top: 2.5rem;
+  margin: 2.5rem 3rem;
 }
 
 .bookItem {
-  border: 1px solid;
+  margin-bottom: 1em;
+  background-color: white;
+  padding: 1.6rem;
+  border: 1px solid var(--soft-gray);
+}
+
+.bookItemSection {
+  width: calc(100% / 3);
+  border: 1px solid red;
+}
+
+.progress {
+  text-align: right;
+  padding-right: 3em;
+}
+
+.bookCategory {
+  color: var(--gray);
+  margin-bottom: .6em;
+  font-size: .9em;
+}
+
+.bookTitle {
+  font-size: 1.2em;
   margin-bottom: 1em;
 }
 
+.button {
+  border: none;
+  border-right: 1px solid var(--soft-gray);
+  background-color: var(--white);
+  padding: 1em;
+  color: var(--secondary-blue);
+  cursor: pointer;
+}
+
+.commentButton {
+  composes: button;
+  padding-left: 0;
+
+}

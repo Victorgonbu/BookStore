@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { CircularProgress } from '@material-ui/core';
 import {
   progress, label, bookDetails, bookItem, flex, buttons,
-  bookItemSection, progressDetails, button,
+  bookItemSection, progressDetails, button, bookCategory,
+  commentButton,
+  bookTitle,
 } from '../style/app.module.css';
 
 function Book(props) {
@@ -12,10 +14,10 @@ function Book(props) {
   return (
     <li className={`${flex} ${bookItem}`}>
       <div className={`${bookItemSection} ${bookDetails}`}>
-        <h1>{book.category}</h1>
-        <h2>{book.title}</h2>
+        <h1 className={bookCategory}>{book.category}</h1>
+        <h2 className={bookTitle}>{book.title}</h2>
         <div className={`${flex} ${buttons}`}>
-          <button className={button} type="button">Comments</button>
+          <button className={commentButton} type="button">Comments</button>
           <button
             type="button"
             className={button}
