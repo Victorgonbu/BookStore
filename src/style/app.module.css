@@ -40,3 +40,12 @@
   color: var(--blue);
 }
 
+.bookList {
+  margin-top: 2.5em;
+}
+
+.bookItem {
+  border: 1px solid;
+  margin-bottom: 1em;
+}
+

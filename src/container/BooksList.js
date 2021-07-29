@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import Filter from '../components/Filter';
+import { bookList } from '../style/app.module.css';
 
 function BooksList(props) {
   const {
@@ -33,7 +34,7 @@ function BooksList(props) {
     <>
       {showFilter
         && <Filter handleFilter={handleFilterChange} />}
-      <ul>
+      <ul className={bookList}>
 
         { filterBooks(books).map((book) => (
           <Book

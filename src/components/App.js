@@ -43,7 +43,6 @@ function App() {
           <MainContainer>
             <Navbar />
             <BooksList showFilter />
-            <BooksForm />
           </MainContainer>
         </Route>
       </Switch>
