@@ -19,16 +19,11 @@
   align-items: center;
 }
 
-
-.navLinks {
-
-}
-
 .navLink{
   margin-right: 1em;
   text-decoration: none;
   color: var(--gray);
-  font-weight: 900;
+  font-weight: bolder;
 }
 
 .active {
@@ -44,3 +39,4 @@
   border-radius: 50%;
   color: var(--blue);
 }
+

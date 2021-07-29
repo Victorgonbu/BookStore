@@ -6,7 +6,8 @@ import { createBook } from '../actions/index';
 function BooksForm(props) {
   const { createBook } = props;
   const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-  const [bookFields, setBookFields] = useState({ title: '', category: '' });
+  const generateProgress = () => Math.floor(Math.random() * 100);
+  const [bookFields, setBookFields] = useState({ title: '', category: '', progress: generateProgress() });
 
   const opt = (CATEGORIES) => CATEGORIES.map((ct) => (<option key={ct} value={ct}>{ct}</option>));
 
@@ -17,7 +18,7 @@ function BooksForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     createBook(bookFields);
-    setBookFields({ title: '', category: '' });
+    setBookFields({ title: '', category: '', progress: generateProgress() });
   };
 
   return (

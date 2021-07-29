@@ -11,8 +11,8 @@ const Navbar = () => (
         Bookstore CMS
       </p>
       <div className={navLinks}>
-        <NavLink className={navLink} activeClassName={active} to="/"> Books </NavLink>
-        <NavLink className={navLink} to="/categories">Categories</NavLink>
+        <NavLink className={navLink} activeClassName={active} exact to="/"> Books </NavLink>
+        <NavLink className={navLink} activeClassName={active} to="/categories">Categories</NavLink>
       </div>
     </div>
 

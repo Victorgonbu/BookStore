@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Montserrat'],
+        families: ['Montserrat:bold,regular'],
       },
     });
   }, []);
@@ -35,6 +35,14 @@ function App() {
           <MainContainer>
             <Navbar />
             <BooksList />
+            <BooksForm />
+          </MainContainer>
+        </Route>
+
+        <Route exact path="/categories">
+          <MainContainer>
+            <Navbar />
+            <BooksList showFilter />
             <BooksForm />
           </MainContainer>
         </Route>
