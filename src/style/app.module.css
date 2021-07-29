@@ -5,6 +5,7 @@
 .navbar {
   border: 1px solid blue;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -25,8 +26,21 @@
 
 .navLink{
   margin-right: 1em;
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 900;
 }
 
 .active {
-  color: red;
+  color: var(--black);
+}
+
+#userIcon {
+  font-size: .5em;
+  height: 2em;
+  width: 2em;
+  padding: 1em;
+  border: 1px solid var(--soft-gray);
+  border-radius: 50%;
+  color: var(--blue);
 }

@@ -1,5 +1,10 @@
 :root {
     --blue: #0290ff;
+    --black: #121212;
+    --white: #f5f6fa;
+    --gray: rgba(0, 0, 0,  0.5);
+    --soft-gray: #e8e8e8;
+
 }
 
 #root {

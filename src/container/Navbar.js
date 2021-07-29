@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  navbar, logo, navLinks, flex, active, leftmost, navLink,
+  navbar, logo, navLinks, flex, leftmost, navLink, userIcon, active,
 } from '../style/app.module.css';
 
 const Navbar = () => (
@@ -16,7 +16,7 @@ const Navbar = () => (
       </div>
     </div>
 
-    <FontAwesomeIcon icon="user" />
+    <FontAwesomeIcon id={userIcon} icon="user" />
 
   </nav>
 );
