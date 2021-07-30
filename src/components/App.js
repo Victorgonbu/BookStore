@@ -13,7 +13,7 @@ library.add(faUser);
 const MainContainer = styled.div`
   display: block;
   width: 90%;
-  height: calc(100vh - 8rem);
+  min-height: calc(100vh - 8rem);
   margin: auto;
   border: 1px solid white;
   border-radius: 4px;
