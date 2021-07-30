@@ -116,7 +116,7 @@
 .updateButton {
   padding: .6em;
   border: 1px solid var(--blue);
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: var(--blue);
   color: var(--background-white);
   cursor: pointer;
@@ -148,7 +148,32 @@
   padding-left: 0;
 }
 
+.bookFormWrapper {
+  composes: innerContainerPadding;
+}
+
 .bookForm {
   composes: flex;
-  composes: innerContainerPadding;
+  gap: 2em;
+
+}
+
+.addBookTitle {
+  color: var(--gray);
+  padding-bottom: 1em;
+}
+
+.titleInput {
+  border:1px solid red;
+  width: 60%;
+}
+
+.categoriesSelect {
+  border:1px solid red;
+  width: 20%;
+}
+
+.addBookButton {
+  composes: updateButton;
+  width: 20%;
 }
