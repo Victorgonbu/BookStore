@@ -2,7 +2,11 @@
 
 This is a book store app that uses React for the user interface and Redux as a state management system.
 
+# App screenshots
 
+![BOOKSSCREENSHOT](/src/imgs/SCREENSHOT.PNG)  
+
+![CATEGORIESSCREENSHOT](/src/imgs/SCREENSHOT2.PNG)
 ## Built With
 
 - Javascript
@@ -16,7 +20,7 @@ This is a book store app that uses React for the user interface and Redux as a s
 
 ## Live Demo
 
-[Heroku deploy link](https://bookstore-react-and-redux.herokuapp.com)
+[Netlify deploy link](https://book-store-shaqri.netlify.app)
 
 ## Getting Started
 

@@ -1,0 +1,25 @@
+:root {
+  --blue: #0290ff;
+  --black: #121212;
+  --white: #fff;
+  --gray: rgba(0, 0, 0, 0.5);
+  --soft-gray: #e8e8e8;
+  --background-white: #fafafa;
+  --outside: #f5f6fa;
+  --secondary-blue: #4386bf;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  background-color: var(--outside);
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1366px) {
+  #root {
+    font-size: 12px;
+  }
+}

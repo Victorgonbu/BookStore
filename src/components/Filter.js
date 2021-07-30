@@ -1,16 +1,16 @@
 import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
+import { categoriesFilter, categoriesFilterTitle } from '../style/app.module.css';
 
 const Filter = (props) => {
-  console.log(props);
   const { handleFilter } = props;
   const CATEGORIES = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   const getOptions = () => CATEGORIES.map((category) => ({ value: category, label: category }));
   const selectOptions = getOptions();
   return (
-    <>
-      <h1>Categories filter</h1>
+    <div className={categoriesFilter}>
+      <h1 className={categoriesFilterTitle}>CATEGORIES FILTER</h1>
       <Select
         className="category"
         classNamePrefix="select"
@@ -19,7 +19,7 @@ const Filter = (props) => {
         options={selectOptions}
         onChange={handleFilter}
       />
-    </>
+    </div>
   );
 };
 

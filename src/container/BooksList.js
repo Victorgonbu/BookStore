@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import Filter from '../components/Filter';
+import { bookList } from '../style/app.module.css';
 
 function BooksList(props) {
   const {
-    books, removeBook, changeFilter, filter,
+    books, removeBook, changeFilter, filter, showFilter,
   } = props;
 
   const getBookIndex = (book, state) => {
@@ -31,26 +32,19 @@ function BooksList(props) {
 
   return (
     <>
-      <Filter handleFilter={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          { filterBooks(books).map((book) => (
-            <Book
-              handleRemove={handleRemove}
-              key={book.id}
-              book={book}
-            />
-          )) }
-        </tbody>
+      {showFilter
+        && <Filter handleFilter={handleFilterChange} />}
+      <ul className={bookList}>
 
-      </table>
+        { filterBooks(books).map((book) => (
+          <Book
+            handleRemove={handleRemove}
+            key={book.id}
+            book={book}
+          />
+        )) }
+
+      </ul>
     </>
   );
 }
@@ -64,6 +58,11 @@ BooksList.propTypes = {
   removeBook: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
   changeFilter: PropTypes.func.isRequired,
+  showFilter: PropTypes.bool,
+};
+
+BooksList.defaultProps = {
+  showFilter: false,
 };
 
 const mapStateToProps = (state) => ({

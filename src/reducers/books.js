@@ -2,16 +2,19 @@ function booksReducer(state = [{
   id: 1,
   title: 'Who moved my cheese',
   category: 'Kids',
+  progress: 54,
 },
 {
   id: 2,
   title: 'Benjamin Franklin',
   category: 'Biography',
+  progress: 26,
 },
 {
   id: 3,
   title: 'Inferno',
   category: 'Horror',
+  progress: 87,
 }], action) {
   const { type, payload } = action;
   const stateCopy = state.slice();
