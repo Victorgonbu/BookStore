@@ -1,3 +1,4 @@
+/* stylelint-disable value-keyword-case */
 .flex {
   display: flex;
 }
@@ -41,7 +42,7 @@
   composes: centerFlexVertical;
 }
 
-.navLink{
+.navLink {
   margin-right: 1em;
   text-decoration: none;
   color: var(--gray);
@@ -53,7 +54,7 @@
 }
 
 #userIcon {
-  font-size: .5em;
+  font-size: 0.5em;
   height: 2em;
   width: 2em;
   padding: 1em;
@@ -86,11 +87,12 @@
 
 .progressLabel {
   font-size: 1.5em;
-  padding-left: .8em;
+  padding-left: 0.8em;
   color: var(--black);
   border-right: 2px solid var(--soft-gray);
   padding-right: 3em;
 }
+
 .progressLabelText {
   font-size: 0.6em;
   color: var(--gray);
@@ -104,8 +106,8 @@
 .chapterTitle {
   color: var(--gray);
   font-weight: 400;
-  font-size: .8em;
-  margin-bottom: .7em;
+  font-size: 0.8em;
+  margin-bottom: 0.7em;
 }
 
 .currentChapter {
@@ -114,19 +116,18 @@
 }
 
 .updateButton {
-  padding: .6em;
+  padding: 0.6em;
   border: 1px solid var(--blue);
   border-radius: 3px;
   background-color: var(--blue);
   color: var(--background-white);
   cursor: pointer;
-
 }
 
 .bookCategory {
   color: var(--gray);
-  margin-bottom: .6em;
-  font-size: .9em;
+  margin-bottom: 0.6em;
+  font-size: 0.9em;
 }
 
 .bookTitle {
@@ -138,7 +139,7 @@
   border: none;
   border-right: 1px solid var(--soft-gray);
   background-color: var(--white);
-  padding: .6em;
+  padding: 0.6em;
   color: var(--secondary-blue);
   cursor: pointer;
 }
@@ -155,7 +156,6 @@
 .bookForm {
   composes: flex;
   gap: 2em;
-
 }
 
 .addBookTitle {
