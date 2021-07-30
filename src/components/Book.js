@@ -2,14 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CircularProgress } from '@material-ui/core';
 import {
-  progress, label, bookDetails, bookItem, flex, buttons,
+  progress, progressLabel, bookDetails, bookItem, flex, buttons,
   bookItemSection, progressDetails, button, bookCategory,
-  commentButton,
-  bookTitle,
+  commentButton, bookTitle, progressLabelText,
 } from '../style/app.module.css';
 
 function Book(props) {
   const { book, handleRemove } = props;
+
+  const circularProgressStyle = {
+    width: '4em',
+    height: '4em',
+    color: 'var(--blue)',
+  };
 
   return (
     <li className={`${flex} ${bookItem}`}>
@@ -30,9 +35,16 @@ function Book(props) {
 
       </div>
 
-      <div className={`${bookItemSection} ${progress}`}>
-        <CircularProgress variant="determinate" value={book.progress} />
-        <div className={label}>{book.progress}</div>
+      <div className={`${bookItemSection} ${progress} ${flex}`}>
+
+        <CircularProgress variant="determinate" style={circularProgressStyle} value={book.progress} />
+        <div className={progressLabel}>
+          {book.progress}
+          %
+          <br />
+          <span className={progressLabelText}>Completed</span>
+        </div>
+
       </div>
 
       <div className={`${bookItemSection} ${progressDetails}`}>

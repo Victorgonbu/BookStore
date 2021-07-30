@@ -60,8 +60,21 @@
 }
 
 .progress {
-  text-align: right;
   padding-right: 3em;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid blue;
+}
+
+.progressLabel {
+  font-size: 1.5em;
+  padding-left: .8em;
+  color: var(--black);
+}
+.progressLabelText {
+  font-size: 0.6em;
+  color: var(--gray);
+  font-weight: 400;
 }
 
 .bookCategory {
@@ -79,7 +92,7 @@
   border: none;
   border-right: 1px solid var(--soft-gray);
   background-color: var(--white);
-  padding: 1em;
+  padding: .6em;
   color: var(--secondary-blue);
   cursor: pointer;
 }
