@@ -2,11 +2,29 @@
   display: flex;
 }
 
+.centerFlex {
+  justify-content: center;
+  align-items: center;
+}
+
+.centerFlexHorizontal {
+  justify-content: center;
+}
+
+.centerFlexVertical {
+  align-items: center;
+}
+
+.innerContainerPadding {
+  padding: 1rem 3rem;
+}
+
 .navbar {
+  composes: flex;
+  composes: centerFlexVertical;
+  composes: innerContainerPadding;
   font-family: 'Montserrat', sans-serif;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
   background-color: white;
   border-bottom: 1px solid var(--soft-gray);
 }
@@ -19,7 +37,8 @@
 }
 
 .leftmost {
-  align-items: center;
+  composes: flex;
+  composes: centerFlexVertical;
 }
 
 .navLink{
@@ -44,12 +63,12 @@
 }
 
 .bookList {
-  margin-top: 2.5rem;
   margin: 2.5rem 3rem;
   font-family: 'Roboto Slab', sans-serif;
 }
 
 .bookItem {
+  composes: flex;
   margin-bottom: 1em;
   background-color: white;
   padding: 1.6rem;
@@ -61,7 +80,7 @@
 }
 
 .progress {
-  align-items: center;
+  composes: centerFlexVertical;
   justify-content: flex-end;
 }
 
@@ -86,8 +105,7 @@
   color: var(--gray);
   font-weight: 400;
   font-size: .8em;
-  margin-bottom: .5em;
-
+  margin-bottom: .7em;
 }
 
 .currentChapter {
@@ -128,5 +146,9 @@
 .commentButton {
   composes: button;
   padding-left: 0;
+}
 
+.bookForm {
+  composes: flex;
+  composes: innerContainerPadding;
 }

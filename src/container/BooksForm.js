@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
+import { bookForm } from '../style/app.module.css';
 
 function BooksForm(props) {
   const { createBook } = props;
@@ -22,7 +23,7 @@ function BooksForm(props) {
   };
 
   return (
-    <form>
+    <form className={bookForm}>
       <div className="title">
         <label htmlFor="title">
           Title
