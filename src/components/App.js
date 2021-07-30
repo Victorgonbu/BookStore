@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Montserrat:bold,regular'],
+        families: ['Montserrat:bold,regular', 'Roboto Slab:regular, bold'],
       },
     });
   }, []);

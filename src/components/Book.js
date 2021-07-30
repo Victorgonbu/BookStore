@@ -4,7 +4,8 @@ import { CircularProgress } from '@material-ui/core';
 import {
   progress, progressLabel, bookDetails, bookItem, flex, buttons,
   bookItemSection, progressDetails, button, bookCategory,
-  commentButton, bookTitle, progressLabelText,
+  commentButton, bookTitle, progressLabelText, chapterTitle, currentChapter,
+  updateButton,
 } from '../style/app.module.css';
 
 function Book(props) {
@@ -14,6 +15,36 @@ function Book(props) {
     width: '4em',
     height: '4em',
     color: 'var(--blue)',
+  };
+
+  const getCurrentChapter = (progress) => {
+    console.log(progress);
+    let chapter;
+    const chapterNumber = Math.floor(progress / 2);
+
+    switch (true) {
+      case (progress < 10):
+        chapter = 'Introduction';
+        break;
+      case progress < 25:
+        chapter = `Chapter ${chapterNumber}:'The process begins'`;
+        break;
+      case progress < 50:
+        chapter = `Chapter ${chapterNumber}:'It'll never end'`;
+        break;
+      case (progress < 75):
+        chapter = `Chapter ${chapterNumber}`;
+        break;
+      case progress < 99:
+        chapter = `Chapter ${chapterNumber}:'Far away'`;
+        break;
+      case progress === 100:
+        chapter = 'Last chapter';
+        break;
+      default:
+        break;
+    }
+    return chapter;
   };
 
   return (
@@ -48,9 +79,9 @@ function Book(props) {
       </div>
 
       <div className={`${bookItemSection} ${progressDetails}`}>
-        <h3>Current progress</h3>
-        <p>random chapter</p>
-        <button type="button">UPDATE PROGRESS</button>
+        <h3 className={chapterTitle}>CURRENT CHAPTER</h3>
+        <p className={currentChapter}>{getCurrentChapter(book.progress)}</p>
+        <button className={updateButton} type="button">UPDATE PROGRESS</button>
       </div>
 
       <div />

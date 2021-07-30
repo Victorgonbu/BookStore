@@ -3,6 +3,7 @@
 }
 
 .navbar {
+  font-family: 'Montserrat', sans-serif;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
@@ -45,6 +46,7 @@
 .bookList {
   margin-top: 2.5rem;
   margin: 2.5rem 3rem;
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 .bookItem {
@@ -56,25 +58,51 @@
 
 .bookItemSection {
   width: calc(100% / 3);
-  border: 1px solid red;
 }
 
 .progress {
-  padding-right: 3em;
   align-items: center;
   justify-content: flex-end;
-  border: 1px solid blue;
 }
 
 .progressLabel {
   font-size: 1.5em;
   padding-left: .8em;
   color: var(--black);
+  border-right: 2px solid var(--soft-gray);
+  padding-right: 3rem;
 }
 .progressLabelText {
   font-size: 0.6em;
   color: var(--gray);
   font-weight: 400;
+}
+
+.progressDetails {
+  padding-left: 2.5rem;
+}
+
+.chapterTitle {
+  color: var(--gray);
+  font-weight: 400;
+  font-size: .8em;
+  margin-bottom: .5em;
+
+}
+
+.currentChapter {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.updateButton {
+  padding: .6em;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: var(--background-white);
+  cursor: pointer;
+
 }
 
 .bookCategory {
